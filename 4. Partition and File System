@@ -13,6 +13,9 @@ mkswap /dev/<sdy>
 # Choose a mount point and assign it to the InterGenOS environment variable
 export IGOS=/mnt/igos
 
+    ** Add the above listed export line to both your ~/.bash_profile, and your /root/.bash_profile
+    ** so that it will be sourced into the environment at every boot.
+
 # Verify the environment variable is in place
 echo $IGOS
 ## Expected return:
