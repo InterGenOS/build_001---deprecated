@@ -4,43 +4,104 @@
 ##****!!!!  Please note that the user 'igos' is being given the pass 'intergenos'  !!!!****##
 #############################################################################################
 
-echo "Welcome to InterGenOS Initial Setup."
+### Color variables
+red="$(echo -e "\033[0;31m")"
+green="$(echo -e "\033[0;32m")"
+lblue="$(echo -e "\033[1;34m")"
+NC="$(echo -e "\033[0m")"
+
+### Python heading
+function print_heading {
+python - <<END
+
+### Python variables
+import time
+import sys
+
+### Python functions
+def delay_print(s):
+    for c in s:
+        sys.stdout.write( '%s' % c )
+        sys.stdout.flush()
+        time.sleep(0.003)
+
+def delay_print2(s):
+    for c in s:
+        sys.stdout.write( '%s' % c )
+        sys.stdout.flush()
+        time.sleep(0.4)
+
+print(" ")
+print(" ")
+delay_print('${lblue}*************************************************************${NC}')
+print(" ")
+delay_print("${lblue}|                                                           |${NC}")
+print(" ")
+delay_print("${lblue}|${NC}           ${green}Welcome to ${NC}Inter${lblue}Gen${NC}OS ${green}Initial Setup${NC}             ${lblue}|${NC}")
+print(" ")
+delay_print("${lblue}|                                                           |${NC}")
+print(" ")
+delay_print("${lblue}|${NC}                       ${green}Build${NC}_${green}001${NC}                           ${lblue}|${NC}")
+print(" ")
+delay_print("${lblue}|                                                           |${NC}")
+print(" ")                                                                                                                                                                                    
+delay_print("${lblue}*************************************************************${NC}")
+print(" ")
+
+END
+}
+
+clear
+
+print_heading
+
 echo " "
-echo "Please enter the partition identifier where you'd like to build InterGenOS"
 echo " "
-read -p "We should set it up for you in /dev/: "
 echo " "
-read -p "Awesome, we'll set up the build for you in /dev/$REPLY, is that alright? [y/n] : " opt
+echo " "
+echo " "
+echo "${green}Please enter the ${NC}Partition ID ${green}where you'd like to build ${NC}Inter${lblue}Gen${NC}OS"
+echo " "
+read -p "${green}We should set it up for you in /dev/${NC}?${green}:${NC} "
+echo " "
+read -p "${green}Ok, you want the build set up for you in /dev/${NC}$REPLY${green}, correct? ${NC}[y/n] ${green}:${NC} " opt
         if [ $opt != y ]; then
                 echo " "
-                echo "Oh," 
+                echo -e "${red}Oh,${NC}" 
                 sleep 1
-                echo "snap,"
+                echo " "
+		echo -e "${red}snap,${NC}"
                 sleep 1
-                echo "Well, then let's make sure we've got your build partition set right, ok?"
                 echo " "
-                read -p "You want it set up on /dev/: " REPLY2
+		echo -e "${green}Well, then let's make sure we've got your ${NC}Build Partition ID ${green}set right, ok?${NC}"
                 echo " "
-                read -p "I think we've go it now- you want it set up in /dev/$REPLY2, right? [y/n] : " opt2
+                read -p "${green}You want it set up on /dev/${NC}?${green}:${NC} " REPLY2
+                echo " "
+                read -p "${green}Alright, let's double check- you want your build set up in /dev/${NC}$REPLY2${green}, right? ${NC}[y/n] ${green}:${NC} " opt2
                         if [ $opt2 != y ]; then
                                 echo " "
-                                echo "Hmmm...Ok, you should double check your build partition info and then run the Initial Setup again."
+				echo " "
+                                echo -e "${NC}Hmmm...${lblue}Ok, you should double check your ${NC}Build Partition ID ${lblue}and then run the ${NC}Initial Setup ${lblue}again.${NC}"
                                 sleep 1
                                 echo " "
-                                echo "We'll hang out right here 'till you get back.  :) "
+                                echo -e "${green}We'll hang out right here 'till you get back.  ${NC}:) "
                                 sleep 1
                                 echo " "
                                 exit 0
                         else
-                                echo "Thank you, the build will now proceed"
+                                echo -e "${green}Thank you, the build will now proceed${NC}"
                         fi
         else
-                echo "Thank you, the build will now proceed"
+		echo " "
+                echo -e "${green}Thank you, the build will now proceed${NC}"
         fi
 sleep 1
-echo "You will be prompted for manual entries when needed."
+echo " "
+echo -e "${green}You will be prompted for manual entries when needed.${NC}"
 sleep 1
-echo "We appreciate your participation in the InterGenOS project."
+echo " "
+echo -e "${green}We appreciate your participation in the InterGenOS project.${NC}"
+sleep 1
 echo " "
 echo " "
 
