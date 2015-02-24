@@ -30,7 +30,7 @@ EOF
 ##################################
 ## Basic line-clearing function ##
 ## Because Shuttlesworth swears ##
-## "Pretty is a feature         ##
+## "Pretty is a feature"        ##
 ##################################
 
 function clearLine() {
