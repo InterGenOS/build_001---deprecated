@@ -31,9 +31,3 @@ Package Management
 ------------------
 Current: Under development, but similar to pacman
 
-
-#********************************************************************************************************#
-#*** Until the installer has been completed, the initial setup for the builds has to be done manually ***#
-#*** The scripts provided make the core system build fairly automated, and scripts are being written  ***#
-#*** to automate the extended packages as well.  Keep checking back for updated scripts.              ***#
-#********************************************************************************************************#
