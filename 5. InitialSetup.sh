@@ -74,6 +74,10 @@ useradd -s /bin/bash -g igos -m -k /dev/null igos
 
 echo "igos:intergenos" | chpasswd &&
 
+chmod +x $IGos/SetEnv.sh
+
+chmod +x $IGos/Build1stPass.sh
+
 chown -v igos $IGos/tools
 
 chown -v igos $IGos/sources
