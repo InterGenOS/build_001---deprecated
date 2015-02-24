@@ -1,8 +1,14 @@
+********************************************************************************************************
+*** Until the installer has been completed, the initial setup for the builds has to be done manually ***
+*** The scripts provided make the core system build fairly automated, and scripts are being written  ***
+*** to automate the extended packages as well.  Keep checking back for updated scripts.              ***
+********************************************************************************************************
+
 Use cfdisk or fdisk with a command line option naming the hard disk on which the build partition will be created—
   for example /dev/sda for the primary disk. 
   
-Create an ext4 Linux native partition, and also create a small swap partition if the host machine has less than 6GB 
-of physical RAM.
+Create an ext4 Linux native partition no less than 50GB in size, and also create a small swap partition if the host 
+machine has less than 6GB of physical RAM.
 
 # Create build file system
 mkfs -v -t ext4 /dev/<sdx>
