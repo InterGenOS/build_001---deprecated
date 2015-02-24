@@ -4,11 +4,11 @@
 *** to automate the extended packages as well.  Keep checking back for updated scripts.              ***
 ********************************************************************************************************
 
-Use cfdisk or fdisk with a command line option naming the hard disk on which the build partition will be created—
-  for example /dev/sda for the primary disk. 
+Use cfdisk or fdisk with a command line option, or a gui partitioning utility such as gparted, naming the 
+hard disk on which the build partition will be created— for example /dev/sda for the primary disk. 
   
-Create an ext4 Linux native partition no less than 50GB in size, and also create a small swap partition if the host 
-machine has less than 6GB of physical RAM.
+Create an ext4 Linux native partition no less than 50GB in size, and also create a small swap partition if 
+the host machine has less than 6GB of physical RAM.
 
 # Create build file system
 mkfs -v -t ext4 /dev/<sdx>
@@ -27,9 +27,7 @@ echo $IGOS
 ## Expected return:
 /mnt/igos
 
-# Create the mount point and mount the IGOS file system
-mkdir -pv $IGOS
-mount -v -t ext4 /dev/<sdx> $IGOS
-
 # Enable swap if needed
 /sbin/swapon -v /dev/<sdy>
+
+# Now download and run the InitialSetup.sh script.
