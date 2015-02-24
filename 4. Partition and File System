@@ -1,33 +1,39 @@
-********************************************************************************************************
-*** Until the installer has been completed, the initial setup for the builds has to be done manually ***
-*** The scripts provided make the core system build fairly automated, and scripts are being written  ***
-*** to automate the extended packages as well.  Keep checking back for updated scripts.              ***
-********************************************************************************************************
+#********************************************************************************************************#
+#*** Until the installer has been completed, the initial setup for the builds has to be done manually ***#
+#*** The scripts provided make the core system build fairly automated, and scripts are being written  ***#
+#*** to automate the extended packages as well.  Keep checking back for updated scripts.              ***#
+#********************************************************************************************************#
 
-Use cfdisk or fdisk with a command line option, or a gui partitioning utility such as gparted, naming the 
-hard disk on which the build partition will be created— for example /dev/sda for the primary disk. 
+## Use cfdisk or fdisk with a command line option, or a gui partitioning utility such as gparted, naming the 
+## hard disk on which the build partition will be created— for example /dev/sda for the primary disk. 
   
-Create an ext4 Linux native partition no less than 50GB in size, and also create a small swap partition if 
-the host machine has less than 6GB of physical RAM.
+## Create an ext4 Linux native partition no less than 50GB in size, and also create a small swap partition if 
+## the host machine has less than 6GB of physical RAM.
 
-# Create build file system
+#############################################
+## CLI examples for setting up fs and swap ##
+#############################################
+
+## Create build file system- CLI style
 mkfs -v -t ext4 /dev/<sdx>
 
-# Create swap if needed
+## Create swap if needed- CLI style
 mkswap /dev/<sdy>
 
-# Choose a mount point and assign it to the InterGenOS environment variable
+###########################################
+
+## Choose a mount point and assign it to the InterGenOS environment variable
 export IGOS=/mnt/igos
 
-    ** Add the above listed export line to both your ~/.bash_profile, and your /root/.bash_profile
-    ** so that it will be sourced into the environment at every boot.
+  ##** Add the above listed export line to both your ~/.bash_profile, and your /root/.bash_profile
+  ##** so that it will be sourced into the environment at every boot.
 
-# Verify the environment variable is in place
+## Verify the environment variable is in place
 echo $IGOS
-## Expected return:
+#### Expected return:
 /mnt/igos
 
-# Enable swap if needed
+## Enable swap if needed
 /sbin/swapon -v /dev/<sdy>
 
-# Now download and run the InitialSetup.sh script.
+## Now download and run the InitialSetup.sh script.
