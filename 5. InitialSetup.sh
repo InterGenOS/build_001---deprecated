@@ -60,7 +60,7 @@ wget http://intergenstudios.com/Downloads/intergen_os_sources.tar.gz &&
 
 tar xf intergen_os_sources.tar.gz &&
 
-mv intergen_os_sources/* sources/ &&
+mv intergen_os_sources/* $IGos/sources/ &&
 
 rm -rf intergen_os_sources intergen_os_sources.tar.gz &&
 
