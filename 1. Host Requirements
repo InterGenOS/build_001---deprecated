@@ -1,3 +1,9 @@
+********************************************************************************************************
+*** Until the installer has been completed, the initial setup for the builds has to be done manually ***
+*** The scripts provided make the core system build fairly automated, and scripts are being written  ***
+*** to automate the extended packages as well.  Keep checking back for updated scripts.              ***
+********************************************************************************************************
+
 Your host system should have the following software with the minimum versions indicated. 
 This should not be an issue for most modern Linux distributions. 
 Also note that many distributions will place software headers into separate packages, often in the form of
