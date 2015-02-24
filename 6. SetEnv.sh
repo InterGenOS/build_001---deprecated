@@ -1,7 +1,21 @@
 #!/bin/bash
+
+#################################################
+## Setting Environment Variables for the build ##
+#################################################
+
+##########################################################
+## The .bash_profile will pull in our .bashrc variables ##
+##########################################################
+
 cat > ~/.bash_profile << "EOF"
 exec env -i HOME=$HOME TERM=$TERM PS1='\u:\w\$ ' /bin/bash
 EOF
+
+######################################################
+## Need to make sure these get set for the duration ##
+## of building the temporary system                 ##
+######################################################
 
 cat > ~/.bashrc << "EOF"
 set +h
@@ -13,9 +27,24 @@ PATH=/tools/bin:/bin:/usr/bin
 export IGos LC_ALL IGos_TGT PATH
 EOF
 
+##################################
+## Basic line-clearing function ##
+## Because Shuttlesworth swears ##
+## "Pretty is a feature         ##
+##################################
+
 function clearLine() {
         tput cuu 1 && tput el
 }
+
+##################################
+## Pass some simple commands on ##
+## to the builder. Will remove  ##
+## these when I figure out how  ##
+## to pass variables on to a    ##
+## new shell.                   ##
+##################################
+
 echo " "
 echo " "
 echo "=========================================="
