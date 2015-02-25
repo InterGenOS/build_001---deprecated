@@ -77,6 +77,7 @@ if [ $opt = y ]; then
     echo " "
     mkdir -pv $IGos
     mount -v -t ext4 /dev/$REPLY $IGos
+    echo "export IGosPart=/dev/$REPLY" >> ~/.bash_profile
 else
     echo " "
     echo -e "${red}Oh,${NC}"
@@ -107,6 +108,7 @@ else
         echo " "
         mkdir -pv $IGos
         mount -v -t ext4 /dev/$REPLY2 $IGos
+        echo "export IGosPart=/dev/$REPLY2" >> ~/.bash_profile
     else
         echo " "
         echo -e "${red}Oh,${NC}"
