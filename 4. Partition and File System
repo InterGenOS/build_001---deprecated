@@ -36,4 +36,4 @@ echo $IGos
 ## Enable swap if needed
 /sbin/swapon -v /dev/<sdy>
 
-## Now download and run the InitialSetup.sh script.
+## Now download and run the InitialSetup.sh script as user 'root'.
