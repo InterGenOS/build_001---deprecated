@@ -1,4 +1,7 @@
 #!/bin/bash
+###  InterGenOS InitialSetup.sh - Put sources and variables in place to build the Temporary System
+###  Written by Christopher 'InterGen' Cork <chris@intergenstudios.com>
+###  2/19/2015
 
 #############################################################################################
 ##****!!!!  Please note that the user 'igos' is being given the pass 'intergenos'  !!!!****##
