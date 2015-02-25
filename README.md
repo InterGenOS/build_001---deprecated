@@ -19,9 +19,9 @@ Targets: KDE, Gnome, LXDE, LXQt, Xfce, Cinnamon, MATE, Enlightenment, and others
 
 Init
 ----
-Current: SystemD
+Current: systemd
 
-Target: SystemD
+Target: systemd
 
 Installer
 ---------
