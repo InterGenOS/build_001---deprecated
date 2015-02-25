@@ -1,4 +1,7 @@
 #!/bin/bash
+###  InterGenOS SetEnv.sh - Set user 'igos' bash files and source them for the Temporary System environment
+###  Written by Christopher 'InterGen' Cork <chris@intergenstudios.com>
+###  2/20/2015
 
 #################################################
 ## Setting Environment Variables for the build ##
