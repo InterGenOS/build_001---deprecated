@@ -7,9 +7,9 @@
 ## Setting Environment Variables for the build ##
 #################################################
 
-##########################################################
-## The .bash_profile will pull in our .bashrc variables ##
-##########################################################
+#################################################
+## The .bash_profile sets our prompt and shell ##
+#################################################
 
 cat > ~/.bash_profile << "EOF"
 exec env -i HOME=$HOME TERM=$TERM PS1='\u:\w\$ ' /bin/bash
