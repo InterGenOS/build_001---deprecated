@@ -1,6 +1,7 @@
 #!/bin/bash
-## InterGenOS - Build Temporary System
-## 2-23-2015
+###  InterGenOS Build1stPass.sh - Build the Temporary System used to create the working system separately from the host 
+###  Written by Christopher 'InterGen' Cork <chris@intergenstudios.com>
+###  2/23/2015
 
 cd /mnt/igos/sources
 
