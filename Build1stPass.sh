@@ -5,7 +5,7 @@
 
 cd /mnt/igos/sources
 
-sed -i '/.\/Build1stPass.sh/d' ./home/igos/.bashrc
+sed -i '/.\/Build1stPass.sh/d' /home/igos/.bashrc
 
 #######################
 ## binutils 1st pass ##
