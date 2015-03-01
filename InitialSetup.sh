@@ -130,9 +130,14 @@ else
     fi
 fi
 
+
+### Create and set permissions on source directory
+
 mkdir -v $IGos/sources
 
 chmod -v a+wt $IGos/sources
+
+### Get and unpack sources
 
 wget http://intergenstudios.com/Downloads/intergen_os_sources.tar.gz &&
 
@@ -142,9 +147,13 @@ mv intergen_os_sources/* $IGos/sources/ &&
 
 rm -rf intergen_os_sources intergen_os_sources.tar.gz &&
 
+### Create and link tools directory
+
 mkdir -v $IGos/tools
 
 ln -sv $IGos/tools /
+
+### Create the 'igos' group and user
 
 groupadd igos
 
@@ -152,21 +161,37 @@ useradd -s /bin/bash -g igos -m -k /dev/null igos
 
 echo "igos:intergenos" | chpasswd &&
 
+### Change ownership of tools and sources directories to user 'igos'
+
 chown -v igos $IGos/tools
 
 chown -v igos $IGos/sources
 
-wget http://intergenstudios.com/Downloads/SetEnv.sh -P $IGos
+### Download Temp System build script, set ownership, and make it executable
 
 wget http://intergenstudios.com/Downloads/Build1stPass.sh -P $IGos
 
-chmod +x $IGos/SetEnv.sh
-
 chmod +x $IGos/Build1stPass.sh
 
-chown -v igos $IGos/SetEnv.sh
-
 chown -v igos $IGos/Build1stPass.sh
+
+### Set .bash_profile and .bashrc for user 'igos'
+
+cat > /home/igos/.bash_profile << "EOF"
+exec env -i HOME=$HOME TERM=$TERM PS1='\u:\w\$ ' /bin/bash
+EOF
+
+cat > /home/igos/.bashrc << "EOF"
+set +h
+umask 022
+IGos=/mnt/igos
+LC_ALL=POSIX
+IGos_TGT=$(uname -m)-igos-linux-gnu
+PATH=/tools/bin:/bin:/usr/bin
+export IGos LC_ALL IGos_TGT PATH
+cd $IGos
+./Build1stPass.sh
+EOF
 
 function clearLine() {
         tput cuu 1 && tput el
@@ -179,28 +204,30 @@ echo "|      Switching to shell for user       |"
 echo "|                'igos'                  |"
 echo "|             in 5 seconds               |"
 echo "|                                        |"
-echo "|       Please do 'cd /mnt/igos'         |"
-echo "|    and run './SetEnv.sh' when the      |"
-echo "|             shell starts               |"
+echo "|     Preparing for Build1stPass.sh      |"
+echo "|                                        |"
+echo "|         This may take awhile...        |"
 echo "|                                        |"
 echo "=========================================="
 echo " "
-echo "In:     5"
+echo "Starting In:     5"
 sleep 1
 clearLine
-echo "In:    4"
+echo "Starting In:    4"
 sleep 1
 clearLine
-echo "In:   3"
+echo "Starting In:   3"
 sleep 1
 clearLine
-echo "In:  2"
+echo "Starting In:  2"
 sleep 1
 clearLine
-echo "In: 1"
+echo "Starting In: 1"
 sleep 1
 clearLine
-echo "Switching shells..."
-sleep 3
+echo "Reticulating Splines - Switching shells..."
+sleep 2
 clearLine
+echo "Go grab yourself a stimulating beverage..."
+sleep 2
 su - igos
