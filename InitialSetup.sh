@@ -7,6 +7,16 @@
 ##****!!!!  Please note that the user 'igos' is being given the pass 'intergenos'  !!!!****##
 #############################################################################################
 
+### Make sure InitialSetup.sh is being run as user 'root'
+if [[ $EUID -ne 0 ]]; then
+   echo " "
+   echo " "
+   echo "   InitialSetup.sh must be run as user 'root'. Exiting." 1>&2
+   echo " "
+   echo " "
+   exit 1
+fi
+
 ### Color variables
 red="$(echo -e "\033[0;31m")"
 green="$(echo -e "\033[0;32m")"
@@ -170,10 +180,19 @@ chown -v igos $IGos/sources
 ### Download Temp System build script, set ownership, and make it executable
 
 wget http://intergenstudios.com/Downloads/Build1stPass.sh -P $IGos
+wget http://intergenstudios.com/Downloads/IGosChroot.sh -P $IGos
+wget http://intergenstudios.com/Downloads/BuildInterGenOS.sh -P $IGos
+wget http://intergenstudios.com/Downloads/BuildInterGenOS_phase2.sh -P $IGos
 
 chmod +x $IGos/Build1stPass.sh
+chmod +x $IGos/IGosChroot.sh
+chmod +x $IGos/BuildInterGenOS.sh
+chmod +x $IGos/BuildInterGenOS_phase2.sh
 
 chown -v igos $IGos/Build1stPass.sh
+chown -v igos $IGos/IGosChroot.sh
+chown -v igos $IGos/BuildInterGenOS.sh
+chown -v igos $IGos/BuildInterGenOS_phase2.sh
 
 ### Set .bash_profile and .bashrc for user 'igos'
 
@@ -210,24 +229,29 @@ echo "|         This may take awhile...        |"
 echo "|                                        |"
 echo "=========================================="
 echo " "
-echo "Starting In:     5"
-sleep 1
+function SleepTimer() {
+	Count=5
+	while [ $Count -gt 0 ]; do
+	echo Starting in: $Count
+	sleep 1
+	clearLine
+	let Count=Count-1
+done
+}
+SleepTimer
 clearLine
-echo "Starting In:    4"
-sleep 1
-clearLine
-echo "Starting In:   3"
-sleep 1
-clearLine
-echo "Starting In:  2"
-sleep 1
-clearLine
-echo "Starting In: 1"
-sleep 1
-clearLine
+echo " "
+echo " "
+echo " "
 echo "Reticulating Splines - Switching shells..."
 sleep 2
 clearLine
 echo "Go grab yourself a stimulating beverage..."
+sleep 1
+echo "This will take a little while..."
+echo " "
+echo " "
+echo " "
 sleep 2
 su - igos
+./IGosChroot.sh

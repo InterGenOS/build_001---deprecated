@@ -798,6 +798,7 @@ strip --strip-debug /tools/lib/* &&
 
 rm -rf /tools/{,share}/{info,man,doc} &&
 
+
 echo " "
 echo " "
 echo " "
@@ -805,17 +806,18 @@ echo "==========================================================================
 echo "|                                                                                 |"
 echo "|                        Temporary System Build Completed                         |"
 echo "|                                                                                 |"
-echo "|                      It is now recommended that you back up                     |"
-echo "|                      /tools for future use, as the directory                    |"
+echo "|                      It is now recommended that you open a                      |"
+echo "|                      separate terminal to back up the /tools                    |"
+echo "|                     directory for future use, as the directory                  |"
 echo "|                   will be altered and eventually removed during                 |"
 echo "|                       the remainder of the build process.                       |"
 echo "|                                                                                 |"
-echo "|                     You now need to exit the 'igos' user shell                  |"
-echo "|                  The remainder of the build process will be done                |"
-echo "|                                  as user 'root'                                 |"
+echo "|                     Dropping to root user shell to continue                     |"
+echo "|                                  build process                                  |"
 echo "|                                                                                 |"
-echo "|                         Please run './BuildInterGenOS.sh'                       |"
-echo "|                         as root from /mnt/igos when ready                       |"
+echo "|                                                                                 |"
+echo "|                               Build will continue                               |"
+echo "|                                  in 90 seconds                                  |"
 echo "|                                                                                 |"
 echo "|                                  InterGen OSsD                                  |"
 echo "|                                       2015                                      |"
@@ -824,4 +826,18 @@ echo "==========================================================================
 echo " "
 echo " "
 echo " "
+function clearLine() {
+        tput cuu 1 && tput el
+}
+function sleepTimer() {
+	COUNT=90
+	while [ $COUNT -gt 0 ]; do
+	echo Coninuing Build in: $COUNT
+	sleep 1
+	clearLine
+	let COUNT=COUNT-1
+done
+}
+sleepTimer
 exit
+
