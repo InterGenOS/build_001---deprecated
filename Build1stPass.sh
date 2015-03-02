@@ -788,6 +788,10 @@ cd /mnt/igos/sources
 
 rm -rf xz-5.0.5
 
+###########################################################
+## Strip unnecessary debugging symbols and documentation ##
+###########################################################
+
 strip --strip-debug /tools/lib/* &&
 
 /usr/bin/strip --strip-unneeded /tools/{,s}bin/* &&
@@ -821,4 +825,3 @@ echo " "
 echo " "
 echo " "
 exit
-
