@@ -179,10 +179,10 @@ chown -v igos $IGos/sources
 
 ### Download Temp System build script, set ownership, and make it executable
 
-wget http://intergenstudios.com/Downloads/Build1stPass.sh -P $IGos
-wget http://intergenstudios.com/Downloads/IGosChroot.sh -P $IGos
-wget http://intergenstudios.com/Downloads/BuildInterGenOS.sh -P $IGos
-wget http://intergenstudios.com/Downloads/BuildInterGenOS_phase2.sh -P $IGos
+wget https://raw.githubusercontent.com/InterGenOS/build_001/master/Build1stPass.sh -P $IGos
+wget https://raw.githubusercontent.com/InterGenOS/build_001/master/IGosChroot.sh -P $IGOs
+wget https://raw.githubusercontent.com/InterGenOS/build_001/master/BuildInterGenOS.sh -P $IGos
+wget https://raw.githubusercontent.com/InterGenOS/build_001/master/BuildInterGenOS_phase2.sh -P $IGos
 
 chmod +x $IGos/Build1stPass.sh
 chmod +x $IGos/IGosChroot.sh
