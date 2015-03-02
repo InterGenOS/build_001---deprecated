@@ -254,4 +254,4 @@ echo " "
 echo " "
 sleep 2
 su - igos
-./IGosChroot.sh
+/mnt/igos/./IGosChroot.sh

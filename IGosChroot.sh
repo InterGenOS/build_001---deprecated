@@ -20,14 +20,12 @@ if [ -h $IGos/dev/shm ]; then
   mkdir -pv $IGos/$(readlink $IGos/dev/shm)
 fi
 
-cat > /mnt/igos/root/.profile << "EOF"
-./BuildInterGenOS.sh
-EOF
-
 ### Enter Chroot 
 chroot "$IGos" /tools/bin/env -i \
     HOME=/root                   \
     TERM="$TERM"                 \
     PS1='\u:\w\$ '               \
     PATH=/bin:/usr/bin:/sbin:/usr/sbin:/tools/bin \
+    touch /mnt/igos/root/.profile \
+    echo "./BuildInterGenOS.sh" >> /mnt/igos/root/.profile \
     /tools/bin/bash --login +h

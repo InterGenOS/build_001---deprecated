@@ -3,13 +3,15 @@
 ###  Written by Christopher 'InterGen' Cork <chris@intergenstudios.com>
 ###  2/23/2015
 
-cd /mnt/igos/sources
+cd /mnt/igos
 
 sed -i '/.\/Build1stPass.sh/d' /home/igos/.bashrc
 
 #######################
 ## binutils 1st pass ##
 #######################
+
+cd /mnt/igos/sources
 
 tar xf binutils-2.24.tar.bz2 &&
 
@@ -839,5 +841,5 @@ function sleepTimer() {
 done
 }
 sleepTimer
-exit
-
+exit &&
+logout
