@@ -253,5 +253,5 @@ echo " "
 echo " "
 echo " "
 sleep 2
-su - igos
+su - igos && exit
 /mnt/igos/./IGosChroot.sh
