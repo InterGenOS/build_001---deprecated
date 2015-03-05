@@ -19,10 +19,6 @@ mount -vt tmpfs tmpfs $IGos/run
 if [ -h $IGos/dev/shm ]; then
   mkdir -pv $IGos/$(readlink $IGos/dev/shm)
 fi
-mkdir /mnt/igos/root
-cat > /mnt/igos/root/.profile << "EOF"
-./BuildInterGenOS.sh
-EOF
 
 ### Enter Chroot 
 chroot "$IGos" /tools/bin/env -i \
