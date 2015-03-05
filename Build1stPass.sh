@@ -638,7 +638,7 @@ rm -rf m4-1.4.17
 ## make ##
 ##########
 
-tar xf make-4.0.tar.bz2 $$
+tar xf make-4.0.tar.bz2 &&
 
 cd make-4.0
 
