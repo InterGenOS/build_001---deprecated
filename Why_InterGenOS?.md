@@ -1,5 +1,10 @@
-#**The InterGenOS Project**    ![alt text](https://github.com/InterGenOS/build_001/blob/master/InterGenOS-2015-02-21-400x226.png "InterGen OSsD")
+![alt text](https://github.com/InterGenOS/build_001/blob/master/InterGenOS-2015-02-21-400x226.png "InterGen OSsD")
+
+
+#**The InterGenOS Project**
 ---
+
+
 ###After their initial look at the project, followed by their 'Oh, cool!', and 'Sweet!' comments, everyone keeps asking me-
                                                       
 
@@ -99,3 +104,6 @@ A. Probably not.  We're still working out fun stuff- like what files and directo
 A. The package manager's name is Linpack (from... Linux Package... seemed simple enough).  It's similar to pacman,
    so anyone who's familiar with Arch will have an easy time adjusting to it.  It's also a bit simpler to use,
    so anyone who's not familiar with Arch will have an easy time adjusting to it, too.  **:)**
+
+
+*more to come, stay tuned...*
