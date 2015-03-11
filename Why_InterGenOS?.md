@@ -47,14 +47,16 @@ A. Not at all.
 ###Q. So if you're not getting paid, why are you doing this?
 
 A. Lot's of reasons:
-```
-  1. <strong>Low cost</strong>  Monetarily it costs me nothing, but I do lose some of my free time (or my wife's free time- depending on 
+
+
+
+  **1. Low cost**  Monetarily it costs me nothing, but I do lose some of my free time (or my wife's free time- depending on 
      who you're asking)
-  2. <strong>Learning</strong>  The amount of information I've learned about Linux since the project's inception is staggering
-  3. <strong>Fun</strong>  Yes, this is fun, enjoyable, and relaxing to me  
-  4. <strong>Contributing</strong>  I've gotten alot of enjoyment out of the free software I've used until this point- I'd like to work 
+  **2. Learning**  The amount of information I've learned about Linux since the project's inception is staggering
+  **3. Fun**  Yes, this is fun, enjoyable, and relaxing to me  
+  **4. Contributing**  I've gotten alot of enjoyment out of the free software I've used until this point- I'd like to work 
      towards giving something back
-```
+
 
 
 ###Q. You're seriously not making a dime off this?
