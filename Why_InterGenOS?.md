@@ -48,23 +48,23 @@ A. Not at all.
 
 A. Lot's of reasons:
 ```
-  1. Low cost. Monetarily it costs me nothing, but I do lose some of my free time (or my wife's free time- depending on 
+  1. **Low cost.** Monetarily it costs me nothing, but I do lose some of my free time (or my wife's free time- depending on 
      who you're asking)
-  2. Learning. The amount of information I've learned about Linux since the project's inception is staggering
-  3. Fun. Yes, this is fun, enjoyable, and relaxing to me  
-  4. Contributing. I've gotten alot of enjoyment out of the free software I've used until this point- I'd like to work 
+  2. **Learning.** The amount of information I've learned about Linux since the project's inception is staggering
+  3. **Fun.** Yes, this is fun, enjoyable, and relaxing to me  
+  4. **Contributing.** I've gotten alot of enjoyment out of the free software I've used until this point- I'd like to work 
      towards giving something back
 ```
 
 
 ###Q. You're seriously not making a dime off this?
 
-A. Unless RedHat decides to hire me, then nope, not a penny
+A. Unless RedHat decides to hire me, then nope, not a **penny**
 
 
 ###Q. Are you retarded?
 
-A. Maybe. But I bet this retard knows alot more about Linux than you do.  :)
+A. Maybe. But I bet this *retard* knows alot more about **Linux** than you do.  **:)**
 
 
 ###Q. Is anyone helping you with the project?
@@ -90,4 +90,4 @@ A. Probably not.  We're still working out fun stuff- like what files and directo
 
 A. The package manager's name is Linpack (from... Linux Package... seemed simple enough).  It's similar to pacman,
    so anyone who's familiar with Arch will have an easy time adjusting to it.  It's also a bit simpler to use,
-   so anyone who's not familiar with Arch will have an easy time adjusting to it, too.  :)
+   so anyone who's not familiar with Arch will have an easy time adjusting to it, too.  **:)**
