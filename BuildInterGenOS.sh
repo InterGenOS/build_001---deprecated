@@ -3,9 +3,6 @@
 ### Written by christopher 'InterGen' Cork <chris@intergenstudios.com>
 ### 3/2/2015
 
-### Remove /root/.profile
-rm -rf /root/.profile
-
 ### Create Directory Structure
 
 mkdir -pv /{bin,boot,etc/{opt,sysconfig},home,lib,mnt,opt}
@@ -90,6 +87,35 @@ nogroup:x:99:
 users:x:999:
 EOF
 
-echo "./BuildInterGenOS_phase2.sh" >> /etc/profile
+echo " "
+echo " "
+echo " "
+echo "=========================================="
+echo "|                                        |"
+echo "|     When the new prompt is loaded,     |"
+echo "|              please run                |"
+echo "|                                        |"
+echo "|     './BuildInterGenOS_phase2.sh'      |"
+echo "|                                        |"
+echo "|         to continue the build.         |"
+echo "|     *Note* This may take awhile...     |"
+echo "|                                        |"
+echo "=========================================="
+
+function clearLine() {
+        tput cuu 1 && tput el
+}
+
+function SleepTimer() {
+	Count=5
+	while [ $Count -gt 0 ]; do
+	echo Loading New Prompt in: $Count
+	sleep 1
+	clearLine
+	let Count=Count-1
+done
+}
+SleepTimer
+clearLine
 
 exec /tools/bin/bash --login +h

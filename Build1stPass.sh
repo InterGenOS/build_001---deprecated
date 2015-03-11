@@ -638,7 +638,7 @@ rm -rf m4-1.4.17
 ## make ##
 ##########
 
-tar xf make-4.0.tar.bz2 $$
+tar xf make-4.0.tar.bz2 &&
 
 cd make-4.0
 
@@ -808,38 +808,22 @@ echo "==========================================================================
 echo "|                                                                                 |"
 echo "|                        Temporary System Build Completed                         |"
 echo "|                                                                                 |"
-echo "|                      It is now recommended that you open a                      |"
-echo "|                      separate terminal to back up the /tools                    |"
-echo "|                     directory for future use, as the directory                  |"
-echo "|                   will be altered and eventually removed during                 |"
-echo "|                       the remainder of the build process.                       |"
+echo "|  It is now recommended that you open a separate terminal to back up the /tools  |"
+echo "|    directory for future use, as the directory will be altered and eventually    |"
+echo "|              removed during the remainder of the build process.                 |"
 echo "|                                                                                 |"
-echo "|                     Dropping to root user shell to continue                     |"
-echo "|                                  build process                                  |"
+echo "|     The remainder of the core system build process must be performed as the     |"
+echo "|   root user. Please drop out of this shell and back into the root user shell,   |"
+echo "|                                 and then run:                                   |"
 echo "|                                                                                 |"
+echo "|                               './IGosChroot.sh'                                 |"
 echo "|                                                                                 |"
-echo "|                               Build will continue                               |"
-echo "|                                  in 90 seconds                                  |"
+echo "|    to enter the temp system via chroot. Don't worry about the new PS1 prompt-   |"
+echo "|       it will say -I have no name!- until you run the next command:             |"
 echo "|                                                                                 |"
-echo "|                                  InterGen OSsD                                  |"
-echo "|                                       2015                                      |"
+echo "|                             './BuildInterGenOS.sh'                              |"
 echo "|                                                                                 |"
 echo "==================================================================================="
 echo " "
 echo " "
 echo " "
-function clearLine() {
-        tput cuu 1 && tput el
-}
-function sleepTimer() {
-	COUNT=90
-	while [ $COUNT -gt 0 ]; do
-	echo Coninuing Build in: $COUNT
-	sleep 1
-	clearLine
-	let COUNT=COUNT-1
-done
-}
-sleepTimer
-exit &&
-logout
