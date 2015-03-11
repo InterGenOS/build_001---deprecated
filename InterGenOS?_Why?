@@ -1,0 +1,33 @@
+                                              ###################################
+                                              ####                            ###
+                                              ####   The InterGenOS Project   ###
+                                              ####                            ###
+                                              ####         3/11/2015          ###
+                                              ####                            ### 
+                                              ###################################
+
+After their initial look at the project, followed by their 'Oh, cool!', and 'Sweet!' comments, everyone keeps asking me-
+
+
+"Why make your own distro, though?  That seems like too much work. Why don't you just use (insert distro title here) and then just 
+add (insert package name here)?"
+
+
+To me the answer is pretty simple:
+
+There isn't a single distro that does exactly what I want it to right out of the box.
+-------------------------------------------------------------------------------------
+
+
+Defining 'what I want a distro to do right out of the box' ties directly to the primary goal of the project, and gives any observer 
+a glimpse at the scope involved:
+
+
+=====================================================================================================================================
+| The InterGenOS Goal:                                                                                                              |
+|     To develop a Linux Distribution that incorporates all current (as of 2015) major Linux Desktop Environments into its core     |
+|     installation, simplifies seemingly odd file and package installation locations, and maintainins an 'Arch Linux'-like ease of  |
+|     use along with excellent package management.                                                                                  |
+=====================================================================================================================================
+
+
