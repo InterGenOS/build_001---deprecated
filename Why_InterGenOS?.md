@@ -1,4 +1,4 @@
-#**The InterGenOS Project**            (http://intergenstudios.com/wp-content/uploads/2015/03/InterGenOS-2015-02-21-400x226.png "InterGen OSsD")
+#**The InterGenOS Project**    ![alt text](https://github.com/InterGenOS/build_001/blob/master/InterGenOS-2015-02-21-400x226.png "InterGen OSsD")
 ---
 ###After their initial look at the project, followed by their 'Oh, cool!', and 'Sweet!' comments, everyone keeps asking me-
                                                       
