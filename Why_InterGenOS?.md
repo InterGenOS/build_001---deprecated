@@ -48,11 +48,11 @@ A. Not at all.
 
 A. Lot's of reasons:
 ```
-  1. **Low cost.** Monetarily it costs me nothing, but I do lose some of my free time (or my wife's free time- depending on 
+  1. **Low cost**  Monetarily it costs me nothing, but I do lose some of my free time (or my wife's free time- depending on 
      who you're asking)
-  2. **Learning.** The amount of information I've learned about Linux since the project's inception is staggering
-  3. **Fun.** Yes, this is fun, enjoyable, and relaxing to me  
-  4. **Contributing.** I've gotten alot of enjoyment out of the free software I've used until this point- I'd like to work 
+  2. **Learning**  The amount of information I've learned about Linux since the project's inception is staggering
+  3. **Fun**  Yes, this is fun, enjoyable, and relaxing to me  
+  4. **Contributing**  I've gotten alot of enjoyment out of the free software I've used until this point- I'd like to work 
      towards giving something back
 ```
 
