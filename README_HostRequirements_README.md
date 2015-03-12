@@ -3,7 +3,25 @@
 
 #**The InterGenOS Project**
 ---
-  
+
+### Project Status and notes:
+---
+
+```
+- Build 001 was completed and runs on several machines, all using AsRock Z77 extreme3 boards with either i5's or i3's
+
+- The build was done installing everything into /usr, more of a _**proof of concept**_ than Distro Development
+
+- **Kernel 3.18.2** was used due to its requirement for the current onboard NIC driver for the RTL8111/8168/8411 PCI 
+  Express Gigabit Ethernet Controller (rev 06)
+
+- Package Management development is ongoing, with the name **linpack** being decided upon (...*lin*ux...*pack*age...)
+  (original... we know)
+
+- No build issues were found during several dozen runs, so build_002 has been started to begin fs development
+```
+
+---
 Until the installer has been completed, the initial setup for the builds has to be done manually
 The scripts provided make the core system build fairly automated, and scripts are being written
 to automate the extended packages as well.  Keep checking back for updated scripts.
@@ -162,3 +180,39 @@ if the host machine has less than 6GB of physical RAM.
 ##<center>Ready to build???</center>
 
 ###<center>Run the setup.sh script as user 'root'<center>
+
+
+---
+
+# build_001
+Linux_3.18.2, systemd, core, C++, Desktop, Runtime Languages, Printing, Multimedia, Gnome, and KDE
+
+Kernel
+------
+Current: Linux 3.18.2
+
+Arch
+----
+Current: x86_64
+
+Targets: x86, x86_64, Multilib
+
+DEs
+---
+Current: KDE, Gnome
+
+Targets: KDE, Gnome, LXDE, LXQt, Xfce, Cinnamon, MATE, Enlightenment, and others
+
+Init
+----
+Current: systemd
+
+Target: systemd
+
+Installer
+---------
+Current: Under development, but similar to Manjaro’s newest
+
+Package Management
+------------------
+Current: Under development, but similar to pacman
