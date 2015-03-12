@@ -19,6 +19,7 @@ Also note that many distributions will place software headers into separate pack
 <center>This build of **InterGenOS** was completed on an **ArchLinux** host system, with all available _**devel**_ type packages for the requirements listed below 
 installed.</center>
 
+```
 -Bash-3.2 (/bin/sh should be a symbolic or hard link to bash)
 -Binutils-2.17 (Versions greater than 2.25 are not recommended as they have not been tested)
 -Bison-2.3 (/usr/bin/yacc should be a link to bison or small script that executes bison)
@@ -39,7 +40,7 @@ installed.</center>
 -Sed-4.1.5
 -Tar-1.18
 -Xz-5.0.0
-
+```
 
 ><center>Some libraries used by gcc can be in an inconsistent state that interferes with building some InterGenOS packages. To check this, look in /usr/lib and possibly /usr/lib64 
 for libgmp.la, libmpfr.la, and libmpc.la.  Either all three should be present or absent, but not only one or two. If the problem exists on your system, either rename or delete the 
@@ -50,7 +51,7 @@ The additional _**req_check.sh**_ and _**lib_check.sh**_ scripts can be used to 
 
 ```
 #!/bin/bash
-req_check.sh - script to verify requirements of critical development tools
+#req_check.sh - script to verify requirements of critical development tools
 
 export LC_ALL=C
 bash --version | head -n1 | cut -d" " -f2-4
@@ -158,6 +159,6 @@ if the host machine has less than 6GB of physical RAM.
 `/sbin/swapon -v /dev/<sdy>`
 
 ---
-#<center>Ready to build???</center>
+##<center>Ready to build???</center>
 
-##<center>Run the setup.sh script as user 'root'<center>
+###<center>Run the setup.sh script as user 'root'<center>
