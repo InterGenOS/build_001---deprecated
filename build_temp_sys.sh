@@ -1,11 +1,11 @@
 #!/bin/bash
-###  InterGenOS Build1stPass.sh - Build the Temporary System used to create the working system separately from the host 
+###  InterGenOS build_temp_sys.sh - Build the Temporary System used to create the working system separately from the host 
 ###  Written by Christopher 'InterGen' Cork <chris@intergenstudios.com>
 ###  2/23/2015
 
 cd /mnt/igos
 
-sed -i '/.\/Build1stPass.sh/d' /home/igos/.bashrc
+sed -i '/.\/build_temp_sys.sh/d' /home/igos/.bashrc
 
 #######################
 ## binutils 1st pass ##
@@ -167,7 +167,23 @@ if [ $Expected != $Actual ]; then
     echo "!!!!!GLIBC 1st PASS SANITY CHECK FAILED!!!!! Halting build, check your work."
     exit 0
 else
+    echo " "
+    echo " "
+    echo " "
+    echo " "
+    echo " "
+    echo " "
+    echo " "
+    echo " "
     echo "Compiler and Linker are functioning as expected, continuing build."
+    echo " "
+    echo " "
+    echo " "
+    echo " "
+    echo " "
+    echo " "
+    echo " "
+    echo " "
 fi
 
 rm -v dummy.c a.out
@@ -303,7 +319,23 @@ if [ $Expected2 != $Actual2 ]; then
     echo "!!!!!GCC 2nd PASS SANITY CHECK FAILED!!!!! Halting build, check your work."
     exit 0
 else
+    echo " "
+    echo " "
+    echo " "
+    echo " "
+    echo " "
+    echo " "
+    echo " "
+    echo " "
     echo "Compiler and Linker are functioning as expected, continuing build."
+    echo " "
+    echo " "
+    echo " "
+    echo " "
+    echo " "
+    echo " "
+    echo " "
+    echo " "
 fi
 
 rm -v dummy.c a.out
