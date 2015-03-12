@@ -1,5 +1,5 @@
 #!/bin/bash
-###  InterGenOS InitialSetup.sh - Put sources and variables in place to build the Temporary System
+###  InterGenOS setup.sh - Put sources and variables in place to build the Temporary System
 ###  Written by Christopher 'InterGen' Cork <chris@intergenstudios.com>
 ###  2/19/2015
 
@@ -7,11 +7,15 @@
 ##****!!!!  Please note that the user 'igos' is being given the pass 'intergenos'  !!!!****##
 #############################################################################################
 
-### Make sure InitialSetup.sh is being run as user 'root'
+### Make sure setup.sh is being run as user 'root'
 if [[ $EUID -ne 0 ]]; then
    echo " "
    echo " "
-   echo "   InitialSetup.sh must be run as user 'root'. Exiting." 1>&2
+   echo "WARNING ****************************************"
+   echo " "
+   echo "   setup.sh must be run as user 'root'. Exiting." 1>&2
+   echo " "
+   echo "WARNING ****************************************"
    echo " "
    echo " "
    exit 1
@@ -149,7 +153,7 @@ chmod -v a+wt $IGos/sources
 
 ### Get and unpack sources
 
-wget http://intergenstudios.com/Downloads/intergen_os_sources.tar.gz &&
+wget http://intergenstudios.com/Downloads/InterGenOS/build001/Core/build001_Core_Sources.tar.gz &&
 
 tar xf intergen_os_sources.tar.gz &&
 
@@ -179,20 +183,11 @@ chown -v igos $IGos/sources
 
 ### Download Temp System build script, set ownership, and make it executable
 
-wget https://raw.githubusercontent.com/InterGenOS/build_001/master/Build1stPass.sh -P $IGos
-wget https://raw.githubusercontent.com/InterGenOS/build_001/master/IGosChroot.sh -P $IGos
-wget https://raw.githubusercontent.com/InterGenOS/build_001/master/BuildInterGenOS.sh -P $IGos
-wget https://raw.githubusercontent.com/InterGenOS/build_001/master/BuildInterGenOS_phase2.sh -P $IGos
+wget https://raw.githubusercontent.com/InterGenOS/build_001/master/build_temp_sys.sh -P $IGos
 
-chmod +x $IGos/Build1stPass.sh
-chmod +x $IGos/IGosChroot.sh
-chmod +x $IGos/BuildInterGenOS.sh
-chmod +x $IGos/BuildInterGenOS_phase2.sh
+chmod +x $IGos/build_temp_sys.sh
 
-chown -v igos $IGos/Build1stPass.sh
-chown -v igos $IGos/IGosChroot.sh
-chown -v igos $IGos/BuildInterGenOS.sh
-chown -v igos $IGos/BuildInterGenOS_phase2.sh
+chown -v igos $IGos/build_temp_sys.sh
 
 ### Set .bash_profile and .bashrc for user 'igos'
 
@@ -209,7 +204,7 @@ IGos_TGT=$(uname -m)-igos-linux-gnu
 PATH=/tools/bin:/bin:/usr/bin
 export IGos LC_ALL IGos_TGT PATH
 cd $IGos
-./Build1stPass.sh
+./build_temp_sys.sh
 EOF
 
 function clearLine() {
@@ -223,7 +218,7 @@ echo "|      Switching to shell for user       |"
 echo "|                'igos'                  |"
 echo "|             in 5 seconds               |"
 echo "|                                        |"
-echo "|     Preparing for Build1stPass.sh      |"
+echo "|    Preparing for build_temp_sys.sh     |"
 echo "|                                        |"
 echo "|         This may take awhile...        |"
 echo "|                                        |"
